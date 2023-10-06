@@ -43,7 +43,7 @@
       var lossPercentage = 100 - successPercentage 
       var balance = initialBalance
       var totalTrades = tradesPerWeek * 52
-      var losses = round(lossPercentage / 100 * totalTrades)
+      var losses = Math.round(lossPercentage / 100 * totalTrades)
       var wins = 0
       
       //loop through all trades, even numbers are wins
