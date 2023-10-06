@@ -106,8 +106,8 @@
           var newTextBalance = document.createTextNode(Math.round(balance));
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
-          var newTextReturn = document.createTextNode(Math.round(rewardFactor * 100 - 100));
-          newCellReturn.appendChild(newTextReturn,"%");
+          var newTextReturn = document.createTextNode(Math.round(rewardFactor * 100 - 100),"%");
+          newCellReturn.appendChild(newTextReturn);
           }
         }
       }
