@@ -39,8 +39,7 @@
       var tradesPerWeek = document.getElementById('tradesPerWeek').value
       var averageRR = document.getElementById('averageRR').value
 
-      var reward = 100 + riskPercentage * averageRR
-      var rewardFactor = reward / 100
+      var rewardFactor = (100 + riskPercentage * averageRR) / 100
       var losses = 100 - successPercentage 
       var balance = initialBalance
       //loop through all trades, even numbers are wins
