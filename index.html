@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trade Calculator</title>
+  </head>
+  <body>
+    <div class="titleMain">
+      <h1>Trade Calculator</h1>
+    </div>
+    <div class="bodyMain">
+      <form class="" action="" method="post">
+        <div class="inputsMain">
+          <h4>Risk</h4>
+          <h5><input type="number" id="riskPercentage" name="riskPercentage" value="1">%</h5>
+          <h4>Success Rate</h4>
+          <h5><input type="number" id="successPercentage" name="successPercentage" value="51">%</h5>
+          <h4>Advanced Risk Management?</h4>
+          <input type="checkbox" id="riskManagement" name="riskManagement" checked>
+          <h4>Starting Balance</h4>
+          <h5>$<input type="number" id="initialBalance" name="initialBalance" value="1000"></h5>
+          <h4>Average amount of trades</h4>
+          <h5><input type="number" id="tradesPerWeek" name="tradesPerWeek" value="4"> per week</h5>
+        </div>
+        <button type="submit" name="button">Calculate</button>
+        </form>
+    </div>
+  </body>
+</html>
