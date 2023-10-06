@@ -58,7 +58,7 @@
       var wins = 0
 
       var tbodyRef = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
-      $("#resultTable tr").remove(); 
+      tbodyRef.innerHTML = ''; 
       //loop through all trades, even numbers are wins
       for(let i = 1; i < totalTrades; i++) {
         if (i % 2 != 0 && losses > 0){
