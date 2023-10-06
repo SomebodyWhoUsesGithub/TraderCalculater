@@ -78,7 +78,7 @@
           var newTextNum = document.createTextNode(losses);
           newCellNum.appendChild(newTextNum);
           var newCellBalance = newRow.insertCell(); 
-          var newTextBalance = document.createTextNode(balance);
+          var newTextBalance = document.createTextNode(Math.round(balance));
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(riskPercentage);
@@ -97,7 +97,7 @@
           var newTextNum = document.createTextNode(wins);
           newCellNum.appendChild(newTextNum);
           var newCellBalance = newRow.insertCell(); 
-          var newTextBalance = document.createTextNode(balance);
+          var newTextBalance = document.createTextNode(Math.round(balance));
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(rewardFactor);
