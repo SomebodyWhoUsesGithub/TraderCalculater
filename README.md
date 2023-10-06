@@ -1,0 +1,2 @@
+# TraderCalculater
+Analyse Strategies
