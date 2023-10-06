@@ -78,19 +78,22 @@
           losses = losses - 1
           
           var newRow = tbodyRef.insertRow();
-          newRow.style.color = "red"
           var newCellTrade = newRow.insertCell(); 
           var newTextTrade = document.createTextNode("#" + i);
           newCellTrade.appendChild(newTextTrade);
+          newCellTrade.style.backgroundColor = "red"
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Loss");
           newCellTitle.appendChild(newTextTitle);
+          newCellTitle.style.backgroundColor = "red"
           var newCellNum = newRow.insertCell(); 
           var newTextNum = document.createTextNode("#" + losses);
           newCellNum.appendChild(newTextNum);
+          newCellNum.style.backgroundColor = "red"
           var newCellBalance = newRow.insertCell(); 
           var newTextBalance = document.createTextNode("$" + Math.round(balance));
           newCellBalance.appendChild(newTextBalance);
+          newCellBalance.style.backgroundColor = "red"
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(riskPercentage + "%");
           newCellReturn.appendChild(newTextReturn, "%");
@@ -105,15 +108,19 @@
           var newCellTrade = newRow.insertCell(); 
           var newTextTrade = document.createTextNode("#" + i);
           newCellTrade.appendChild(newTextTrade);
+          newCellTrade.style.backgroundColor = "green"
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Win");
           newCellTitle.appendChild(newTextTitle);
+          newCellTitle.style.backgroundColor = "green"
           var newCellNum = newRow.insertCell(); 
           var newTextNum = document.createTextNode("#" + wins);
           newCellNum.appendChild(newTextNum);
+          newCellNum.style.backgroundColor = "green"
           var newCellBalance = newRow.insertCell(); 
           var newTextBalance = document.createTextNode("$" + Math.round(balance));
           newCellBalance.appendChild(newTextBalance);
+          newCellBalance.style.backgroundColor = "green"
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(Math.round(rewardFactor * 100 - 100) + "%");
           newCellReturn.appendChild(newTextReturn);
