@@ -43,10 +43,11 @@
       var lossPercentage = 100 - successPercentage 
       var balance = initialBalance
       var totalTrades = tradesPerWeek * 52
-      var losses = lossPercentage / 100 * totalTrades
+      var losses = round(lossPercentage / 100 * totalTrades)
+      var wins = 0
       
       //loop through all trades, even numbers are wins
-      for(let i = 0; i < totalTrades; i++) {
+      for(let i = 1; i < totalTrades; i++) {
         if (i % 2 != 0 && losses > 0){
           //if uneven index a loss untill there are no more
           //not random but ensures all losses are relatively early creating a slow curve
@@ -56,8 +57,8 @@
         }else{
           if(i % 2 == 0){
             balance = balance * rewardFactor
-            successPercentage = successPercentage - 1
-            console.log("win", successPercentage, balance)
+            wins = wins + 1
+            console.log("win", wins, balance)
           }
         }
       }
