@@ -9,7 +9,7 @@
       <h1>Trade Calculator</h1>
     </div>
     <div class="bodyMain">
-      <form class="" action="" method="post">
+      <form class="" id="calcForm" action="" method="post">
         <div class="inputsMain">
           <h4>Risk</h4>
           <h5><input type="number" id="riskPercentage" name="riskPercentage" value="1">%</h5>
@@ -26,4 +26,11 @@
         </form>
     </div>
   </body>
+  <script>
+    var form = document.getElementByID('calcForm')
+
+    form.addEventListener('submit', function(event){
+      e.preventDefault()
+    })
+  </script>
 </html>
