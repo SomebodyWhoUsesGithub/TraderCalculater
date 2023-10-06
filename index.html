@@ -29,11 +29,9 @@
     </div>
       <table id="resultTable">
         <thead>
-          <tr>
             <th>Result</th>
             <th>#</th>
             <th>Balance</th>
-          </tr>
         </thead>
         <tbody>
           
@@ -58,7 +56,9 @@
       var totalTrades = tradesPerWeek * 52
       var losses = Math.round(lossPercentage / 100 * totalTrades)
       var wins = 0
-      
+
+      var tbodyRef = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
+      $("#resultTable tr").remove(); 
       //loop through all trades, even numbers are wins
       for(let i = 1; i < totalTrades; i++) {
         if (i % 2 != 0 && losses > 0){
@@ -68,7 +68,6 @@
           console.log("loss",losses, balance)
           losses = losses - 1
 
-          var tbodyRef = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
           var newRow = tbodyRef.insertRow();
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Loss");
@@ -84,7 +83,7 @@
             balance = balance * rewardFactor
             wins = wins + 1
             console.log("win", wins, balance)
-var tbodyRef = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
+            
           var newRow = tbodyRef.insertRow();
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Win");
