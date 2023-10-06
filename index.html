@@ -37,6 +37,7 @@
     </form>
     <table id="resultTable" class="table">
       <thead>
+          <th>Trade</th>
           <th>Result</th>
           <th>#</th>
           <th>Balance</th>
@@ -69,6 +70,10 @@
       tbodyRef.innerHTML = ''; 
       //loop through all trades, even numbers are wins
       for(let i = 1; i < totalTrades; i++) {
+        var newRow = tbodyRef.insertRow();
+        var newCellTrade = newRow.insertCell(); 
+          var newTextTrade = document.createTextNode("#" + i);
+          newCellTrade.appendChild(newTextTrade);
         if (i % 2 != 0 && losses > 0){
           //if uneven index a loss untill there are no more
           //not random but ensures all losses are relatively early creating a slow curve
@@ -76,7 +81,6 @@
           console.log("loss",losses, balance)
           losses = losses - 1
 
-          var newRow = tbodyRef.insertRow();
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Loss");
           newCellTitle.appendChild(newTextTitle);
@@ -95,7 +99,6 @@
             wins = wins + 1
             console.log("win", wins, balance)
             
-          var newRow = tbodyRef.insertRow();
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Win");
           newCellTitle.appendChild(newTextTitle);
