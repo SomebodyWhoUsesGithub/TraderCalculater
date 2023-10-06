@@ -82,7 +82,7 @@
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(riskPercentage);
-          newCellReturn.appendChild(newTextReturn);
+          newCellReturn.appendChild(newTextReturn, "%");
         }else{
           if(i % 2 == 0){
             balance = balance * rewardFactor
@@ -101,7 +101,7 @@
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(rewardFactor);
-          newCellReturn.appendChild(newTextReturn);
+          newCellReturn.appendChild(newTextReturn,"%");
           }
         }
       }
