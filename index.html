@@ -112,7 +112,7 @@
           var newTextBalance = document.createTextNode(Math.round(balance));
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
-          var newTextReturn = document.createTextNode(rewardFactor);
+          var newTextReturn = document.createTextNode(rewardFactor * 100 - 100);
           newCellReturn.appendChild(newTextReturn,"%");
           }
         }
