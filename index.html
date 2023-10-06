@@ -94,6 +94,7 @@
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(riskPercentage + "%");
           newCellReturn.appendChild(newTextReturn, "%");
+          newCellReturn.style.backgroundColor = "red"
         }else{
           if(i % 2 == 0){
             balance = balance * rewardFactor
