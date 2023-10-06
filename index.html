@@ -115,6 +115,7 @@
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(Math.round(rewardFactor * 100 - 100) + "%");
+          newTextReturn.style.backgroundColor = "green"
           newCellReturn.appendChild(newTextReturn);
           }
         }
