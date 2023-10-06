@@ -39,8 +39,19 @@
       var tradesPerWeek = document.getElementById('tradesPerWeek').value
       var averageRR = document.getElementById('averageRR').value
 
-      var reward = riskPercentage * averageRR
-      console.log(reward)
+      var reward = 100 + riskPercentage * averageRR
+      var rewardFactor = reward / 100
+      var losses = 100 - successPercentage 
+      var balance = initialBalance
+      //loop through all trades, even numbers are wins
+      for (let i = 0; i < 100; i++) {
+        if (i % 2 = 0){
+          balance = balance * rewardFactor
+        }
+      }
+      //if uneven index a loss untill there are no more
+      //not random but ensures all losses are relatively early creating a slow curve
+      console.log(balance)
       console.log(riskPercentage)
       console.log(successPercentage)
       console.log(riskManagement)
