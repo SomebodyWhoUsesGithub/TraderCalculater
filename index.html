@@ -70,19 +70,17 @@
       tbodyRef.innerHTML = ''; 
       //loop through all trades, even numbers are wins
       for(let i = 1; i < totalTrades; i++) {
-        if (losses > 0){
-          var newRow = tbodyRef.insertRow();
-          var newCellTrade = newRow.insertCell(); 
-          var newTextTrade = document.createTextNode("#" + i);
-          newCellTrade.appendChild(newTextTrade);
-        }
         if (i % 2 != 0 && losses > 0){
           //if uneven index a loss untill there are no more
           //not random but ensures all losses are relatively early creating a slow curve
           balance = balance * ((100 - riskPercentage) / 100)
           console.log("loss",losses, balance)
           losses = losses - 1
-
+          
+          var newRow = tbodyRef.insertRow();
+          var newCellTrade = newRow.insertCell(); 
+          var newTextTrade = document.createTextNode("#" + i);
+          newCellTrade.appendChild(newTextTrade);
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Loss");
           newCellTitle.appendChild(newTextTitle);
@@ -100,7 +98,11 @@
             balance = balance * rewardFactor
             wins = wins + 1
             console.log("win", wins, balance)
-            
+
+          var newRow = tbodyRef.insertRow();
+          var newCellTrade = newRow.insertCell(); 
+          var newTextTrade = document.createTextNode("#" + i);
+          newCellTrade.appendChild(newTextTrade);
           var newCellTitle = newRow.insertCell(); 
           var newTextTitle = document.createTextNode("Win");
           newCellTitle.appendChild(newTextTitle);
