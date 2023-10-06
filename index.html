@@ -70,11 +70,13 @@
       tbodyRef.innerHTML = ''; 
       //loop through all trades, even numbers are wins
       for(let i = 1; i < totalTrades; i++) {
-        var newRow = tbodyRef.insertRow();
-        var newCellTrade = newRow.insertCell(); 
+        if (losses > 0){
+          var newRow = tbodyRef.insertRow();
+          var newCellTrade = newRow.insertCell(); 
           var newTextTrade = document.createTextNode("#" + i);
           newCellTrade.appendChild(newTextTrade);
-        if (i % 2 != 0 && losses >= 0){
+        }
+        if (i % 2 != 0 && losses > 0){
           //if uneven index a loss untill there are no more
           //not random but ensures all losses are relatively early creating a slow curve
           balance = balance * ((100 - riskPercentage) / 100)
