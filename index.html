@@ -42,8 +42,9 @@
       var rewardFactor = (100 + riskPercentage * averageRR) / 100
       var losses = 100 - successPercentage 
       var balance = initialBalance
+      var totalTrades = tradesPerWeek * 52
       //loop through all trades, even numbers are wins
-      for(let i = 0; i < 100; i++) {
+      for(let i = 0; i < totalTrades; i++) {
         if (i % 2 != 0 && losses > 0){
           balance = balance * ((100 - riskPercentage) / 100)
           losses = losses - 1
