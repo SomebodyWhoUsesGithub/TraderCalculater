@@ -27,10 +27,21 @@
     </div>
   </body>
   <script>
-    var form = document.getElementByID('calcForm')
+    var form = document.getElementById('calcForm')
 
     form.addEventListener('submit', function(event){
       e.preventDefault()
+      var riskPercentage = document.getElementById('riskPercentage').value
+      var successPercentage = document.getElementById('successPercentage').value
+      var riskManagement = document.getElementById('riskManagement').value
+      var initialBalance = document.getElementById('initialBalance').value
+      var tradesPerWeek = document.getElementById('tradesPerWeek').value
+
+      console.log(riskPercentage)
+      console.log(successPercentage)
+      console.log(riskManagement)
+      console.log(initialBalance)
+      console.log(tradesPerWeek)
     })
   </script>
 </html>
