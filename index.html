@@ -32,6 +32,7 @@
             <th>Result</th>
             <th>#</th>
             <th>Balance</th>
+            <th>Return</th>
         </thead>
         <tbody>
           
@@ -78,6 +79,9 @@
           var newCellBalance = newRow.insertCell(); 
           var newTextBalance = document.createTextNode(balance);
           newCellBalance.appendChild(newTextBalance);
+          var newCellReturn = newRow.insertCell(); 
+          var newTextReturn = document.createTextNode(rewardFactor);
+          newCellReturn.appendChild(newTextReturn);
         }else{
           if(i % 2 == 0){
             balance = balance * rewardFactor
@@ -94,6 +98,9 @@
           var newCellBalance = newRow.insertCell(); 
           var newTextBalance = document.createTextNode(balance);
           newCellBalance.appendChild(newTextBalance);
+          var newCellReturn = newRow.insertCell(); 
+          var newTextReturn = document.createTextNode(riskPercentage);
+          newCellReturn.appendChild(newTextReturn);
           }
         }
       }
