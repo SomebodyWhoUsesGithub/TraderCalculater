@@ -21,6 +21,7 @@
           <h5>$<input type="number" id="initialBalance" name="initialBalance" min="50" value="1000"></h5>
           <h4>Average amount of trades</h4>
           <h5><input type="number" id="tradesPerWeek" name="tradesPerWeek" min="1" max="320" value="4"> per week</h5>
+          <h5>1:<input type="number" id="averageRR" name="averageRR" min="2" max="320" value="3"></h5>
           <input type="submit" value="Calculate"></input>
           </div>
         </form>
@@ -36,7 +37,10 @@
       var riskManagement = document.getElementById('riskManagement').checked
       var initialBalance = document.getElementById('initialBalance').value
       var tradesPerWeek = document.getElementById('tradesPerWeek').value
+      var averageRR = document.getElementById('averageRR').value
 
+      var reward = riskpercentage * averageRR
+      console.log(reward)
       console.log(riskPercentage)
       console.log(successPercentage)
       console.log(riskManagement)
