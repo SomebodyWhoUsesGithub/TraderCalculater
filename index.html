@@ -78,7 +78,7 @@
           losses = losses - 1
           
           var newRow = tbodyRef.insertRow();
-          newRow.innerHTML.style.color = "red"
+          newRow.style.color = "red"
           var newCellTrade = newRow.insertCell(); 
           var newTextTrade = document.createTextNode("#" + i);
           newCellTrade.appendChild(newTextTrade);
@@ -115,7 +115,7 @@
           newCellBalance.appendChild(newTextBalance);
           var newCellReturn = newRow.insertCell(); 
           var newTextReturn = document.createTextNode(Math.round(rewardFactor * 100 - 100) + "%");
-          newTextReturn.style.color = "green"
+          newTextReturn.innerHTML.style.color = "green"
           newCellReturn.appendChild(newTextReturn);
           }
         }
