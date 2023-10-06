@@ -10,33 +10,36 @@
     <div class="container text-center">
       <h1>Trade Calculator</h1>
     </div>
-    <form id="calcForm">
-      <div class="mb-3">
-        <h4>Risk</h4>
-        <h5><input type="number" id="riskPercentage" name="riskPercentage" min="0.1" max="5" step=".1" value="0.5">%</h5>
-      </div>
-      <div class="mb-3">
-        <h4>Success Rate</h4>
-        <h5><input type="number" id="successPercentage" name="successPercentage" min="50" max="99" value="51">%</h5>
-      </div>
-      <div class="mb-3 form-check">
-        <h4>Advanced Risk Management?</h4>
-        <input type="checkbox" id="riskManagement" name="riskManagement">
-      </div
-      <div class="mb-3">
-        <h4>Starting Balance</h4>
-        <h5>$<input type="number" id="initialBalance" name="initialBalance" min="50" value="1000"></h5>
-      </div>
-      <div class="mb-3">
-        <h4>Average amount of trades</h4>
-        <h5><input type="number" id="tradesPerWeek" name="tradesPerWeek" min="1" max="320" value="2"> per week</h5>
-      </div>
-      <div class="mb-3">
-        <h4>Risk to Reward</h4>
-        <h5>1:<input type="number" id="averageRR" name="averageRR" min="2" max="320" value="2"></h5>
-      </div>
-      <input type="submit" value="Calculate" class="btn btn-primary"></input>
+    <div class="container text-center">
+      <form id="calcForm">
+        <div class="mb-3">
+          <h4>Risk</h4>
+          <h5><input type="number" id="riskPercentage" name="riskPercentage" min="0.1" max="5" step=".1" value="0.5">%</h5>
+        </div>
+        <div class="mb-3">
+          <h4>Success Rate</h4>
+          <h5><input type="number" id="successPercentage" name="successPercentage" min="50" max="99" value="51">%</h5>
+        </div>
+        <div class="mb-3 form-check">
+          <h4>Advanced Risk Management?</h4>
+          <input type="checkbox" id="riskManagement" name="riskManagement">
+        </div
+        <div class="mb-3">
+          <h4>Starting Balance</h4>
+          <h5>$<input type="number" id="initialBalance" name="initialBalance" min="50" value="1000"></h5>
+        </div>
+        <div class="mb-3">
+          <h4>Average amount of trades</h4>
+          <h5><input type="number" id="tradesPerWeek" name="tradesPerWeek" min="1" max="320" value="2"> per week</h5>
+        </div>
+        <div class="mb-3">
+          <h4>Risk to Reward</h4>
+          <h5>1:<input type="number" id="averageRR" name="averageRR" min="2" max="320" value="2"></h5>
+        </div>
+        <input type="submit" value="Calculate" class="btn btn-primary"></input>
       </form>
+    </div>
+    <div class="container text-center">
       <table id="resultTable" class="table">
         <thead>
             <th>Result</th>
@@ -47,6 +50,7 @@
         <tbody>
         </tbody>
       </table>
+    </div>
   </body>
   <script>
     var form = document.getElementById('calcForm')
