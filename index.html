@@ -48,13 +48,13 @@
         if (i % 2 != 0 && losses > 0){
           balance = balance * ((100 - riskPercentage) / 100)
           losses = losses - 1
-          console.log(losses)
+          console.log("loss",losses)
         }else{
           if(i % 2 == 0){
             balance = balance * rewardFactor
+            console.log("win",balance)
           }
         }
-        console.log(balance)
       }
       //if uneven index a loss untill there are no more
       //not random but ensures all losses are relatively early creating a slow curve
