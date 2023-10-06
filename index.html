@@ -12,15 +12,15 @@
       <form id="calcForm">
         <div class="inputsMain">
           <h4>Risk</h4>
-          <h5><input type="number" id="riskPercentage" name="riskPercentage" step=".1" value="1">%</h5>
+          <h5><input type="number" id="riskPercentage" name="riskPercentage" step=".1" value="0.25">%</h5>
           <h4>Success Rate</h4>
-          <h5><input type="number" id="successPercentage" name="successPercentage" step=".1" value="51">%</h5>
+          <h5><input type="number" id="successPercentage" name="successPercentage" min="50" step=".1" value="50.5">%</h5>
           <h4>Advanced Risk Management?</h4>
           <input type="checkbox" id="riskManagement" name="riskManagement">
           <h4>Starting Balance</h4>
           <h5>$<input type="number" id="initialBalance" name="initialBalance" value="1000"></h5>
           <h4>Average amount of trades</h4>
-          <h5><input type="number" id="tradesPerWeek" name="tradesPerWeek" value="4"> per week</h5>
+          <h5><input type="number" id="tradesPerWeek" name="tradesPerWeek" min="1" value="4"> per week</h5>
           <input type="submit" value="Calculate"></input>
           </div>
         </form>
