@@ -26,6 +26,14 @@
           </div>
         </form>
     </div>
+      <table id="resultTable">
+        <thead>
+          <tr><th>Results</th></tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
   </body>
   <script>
     var form = document.getElementById('calcForm')
@@ -52,13 +60,24 @@
           //if uneven index a loss untill there are no more
           //not random but ensures all losses are relatively early creating a slow curve
           balance = balance * ((100 - riskPercentage) / 100)
-          console.log("loss",losses)
+          console.log("loss",losses, balance)
           losses = losses - 1
+
+          var tbodyRef = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
+          var newRow = tbodyRef.insertRow();
+          var newCell = newRow.insertCell(); 
+          var newText = document.createTextNode("Loss", losses, balance);
+          newCell.appendChild(newText);
         }else{
           if(i % 2 == 0){
             balance = balance * rewardFactor
             wins = wins + 1
             console.log("win", wins, balance)
+var tbodyRef = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
+          var newRow = tbodyRef.insertRow();
+          var newCell = newRow.insertCell(); 
+          var newText = document.createTextNode("Win", wins, balance);
+          newCell.appendChild(newText);
           }
         }
       }
