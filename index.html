@@ -50,7 +50,9 @@
           losses = losses - 1
           console.log(losses)
         }else{
-          balance = balance * rewardFactor
+          if(i % 2 == 0){
+            balance = balance * rewardFactor
+          }
         }
         console.log(balance)
       }
