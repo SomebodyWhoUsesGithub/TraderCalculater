@@ -105,9 +105,9 @@
           newCellReturn.style.backgroundColor = "red"
           var newCellSize = newRow.insertCell();
           if(balance < 100){
-            var newTextSize = document.createTextNode((balance * (riskPercentage / 100)).toFixed(1));
+            var newTextSize = document.createTextNode("$" + (balance * (riskPercentage / 100)).toFixed(1));
           }else{
-            var newTextSize = document.createTextNode(Math.floor(balance * (riskPercentage / 100)));
+            var newTextSize = document.createTextNode("$" + Math.floor(balance * (riskPercentage / 100)));
           }
           newCellSize.appendChild("$" + newTextSize);
           newCellSize.style.backgroundColor = "red"
@@ -144,11 +144,11 @@
           newCellReturn.style.backgroundColor = "green"
           var newCellSize = newRow.insertCell(); 
           if(balance < 100){
-            var newTextSize = document.createTextNode((balance * (riskPercentage / 100)).toFixed(1));
+            var newTextSize = document.createTextNode("$" + (balance * (riskPercentage / 100)).toFixed(1));
           }else{
-            var newTextSize = document.createTextNode(Math.floor(balance * (riskPercentage / 100)));
+            var newTextSize = document.createTextNode("$" + Math.floor(balance * (riskPercentage / 100)));
           }          
-          newCellSize.appendChild("$" + newTextSize);
+          newCellSize.appendChild(newTextSize);
           newCellSize.style.backgroundColor = "green"
           }
         }
