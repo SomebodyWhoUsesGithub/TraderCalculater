@@ -109,7 +109,7 @@
           }else{
             var newTextSize = document.createTextNode("$" + Math.floor(balance * (riskPercentage / 100)));
           }
-          newCellSize.appendChild("$" + newTextSize);
+          newCellSize.appendChild(newTextSize);
           newCellSize.style.backgroundColor = "red"
         }else{
           if(i % 2 == 0){
