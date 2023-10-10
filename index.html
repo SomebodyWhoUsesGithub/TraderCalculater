@@ -91,7 +91,7 @@
           newCellNum.appendChild(newTextNum);
           newCellNum.style.backgroundColor = "red"
           var newCellBalance = newRow.insertCell(); 
-          var newTextBalance = document.createTextNode("$" + Math.round(balance));
+          var newTextBalance = document.createTextNode("$" + balance.toFixed(2));
           newCellBalance.appendChild(newTextBalance);
           newCellBalance.style.backgroundColor = "red"
           var newCellReturn = newRow.insertCell(); 
@@ -118,7 +118,7 @@
           newCellNum.appendChild(newTextNum);
           newCellNum.style.backgroundColor = "green"
           var newCellBalance = newRow.insertCell(); 
-          var newTextBalance = document.createTextNode("$" + Math.round(balance));
+          var newTextBalance = document.createTextNode("$" + balance.toFixed(2));
           newCellBalance.appendChild(newTextBalance);
           newCellBalance.style.backgroundColor = "green"
           var newCellReturn = newRow.insertCell(); 
