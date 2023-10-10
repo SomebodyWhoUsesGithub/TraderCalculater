@@ -63,7 +63,7 @@
       var lossPercentage = 100 - successPercentage 
       var balance = initialBalance
       var totalTrades = tradesPerWeek * 52
-      var losses = Math.round(lossPercentage / 100 * totalTrades)
+      var losses = Math.ceil(lossPercentage / 100 * totalTrades)
       var wins = 0
 
       var tbodyRef = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
