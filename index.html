@@ -42,7 +42,7 @@
           <th style="background-color:black">#</th>
           <th style="background-color:black">Balance</th>
           <th style="background-color:black">Return</th>
-          <th style="background-color:black">Size</th>
+          <th style="background-color:black">Next Risk</th>
       </thead>
       <tbody>
       </tbody>
@@ -104,8 +104,8 @@
           newCellReturn.appendChild(newTextReturn, "%");
           newCellReturn.style.backgroundColor = "red"
           var newCellSize = newRow.insertCell(); 
-          var newTextSize = document.createTextNode(balance * (riskPercentage / 100));
-          newCellSize.appendChild(newTextSize, "%");
+          var newTextSize = document.createTextNode((balance * (riskPercentage / 100)).toFixed(1));
+          newCellSize.appendChild(newTextSize);
           newCellSize.style.backgroundColor = "red"
         }else{
           if(i % 2 == 0){
@@ -139,8 +139,8 @@
           newCellReturn.appendChild(newTextReturn);
           newCellReturn.style.backgroundColor = "green"
           var newCellSize = newRow.insertCell(); 
-          var newTextSize = document.createTextNode(balance * (riskPercentage / 100));
-          newCellSize.appendChild(newTextSize, "%");
+                    var newTextSize = document.createTextNode((balance * (riskPercentage / 100)).toFixed(1));
+          newCellSize.appendChild(newTextSize);
           newCellSize.style.backgroundColor = "green"
           }
         }
