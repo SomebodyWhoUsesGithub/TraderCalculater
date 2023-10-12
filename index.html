@@ -139,7 +139,7 @@
           newCellBalance.appendChild(newTextBalance);
           newCellBalance.style.backgroundColor = "green"
           var newCellReturn = newRow.insertCell(); 
-          var newTextReturn = document.createTextNode(Math.round(rewardFactor * 100 - 100) + "%");
+          var newTextReturn = document.createTextNode((rewardFactor * 100 - 100).toFixed(1) + "%");
           newCellReturn.appendChild(newTextReturn);
           newCellReturn.style.backgroundColor = "green"
           var newCellSize = newRow.insertCell(); 
